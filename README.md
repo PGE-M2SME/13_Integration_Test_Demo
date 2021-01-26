@@ -40,6 +40,7 @@ FPGA_Generation| 0x3
 
 # Intégration
 
+Lorsque les trames et les registres auront étés livrés, on pourra creer deux nouveau groupes pour l'intégration.
 On peut séparer l'intégration software en deux grandes parties : STM32 et FPGA
 
 ## Intégration STM32
