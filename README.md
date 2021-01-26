@@ -1,7 +1,3 @@
-# Calendrier des livraisons
-
-![](Images/Agenda.PNG)
-
 # Trames et registres
 
 ## Trames
@@ -74,3 +70,7 @@ L’équipe fera l’intégration entre :
 ![](Images/InteSoft_FPGA.PNG)
 
 # Test et démo
+
+# Calendrier des livraisons
+
+![](Images/Agenda.PNG)
