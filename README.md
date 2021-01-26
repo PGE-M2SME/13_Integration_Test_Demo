@@ -64,7 +64,7 @@ L'équipe devra d'abord coder :
 L’équipe fera l’intégration entre :
 - Les commandes Génération/Analyse/BUS_COM
 - Les Script d’encodage et de décodage
-- Les libraires SPI
+- Les components SPI
 
 
 ![](Images/InteSoft_FPGA.PNG)
