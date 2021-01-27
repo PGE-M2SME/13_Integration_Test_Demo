@@ -35,8 +35,9 @@ Registres ID_Sys :
 Nom  | Valeur
 -----|-------------
 STM32 | 0x1
-FPGA_Analyse | 0x2
-FPGA_Generation| 0x3
+FPGA_Generation | 0x2
+FPGA_Analyse| 0x3
+FPGA_BUS_COM|0x4
 
 # Intégration
 
