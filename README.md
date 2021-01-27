@@ -68,7 +68,7 @@ L’équipe fera l’intégration entre :
 - Les components SPI
 
 
-![](Images/InteSoft_FPGA.PNG)
+![](Images/InteSoft_FPGA1.PNG) ![](Images/InteSoft_FPGA1.PNG)
 
 # Test et démo
 
