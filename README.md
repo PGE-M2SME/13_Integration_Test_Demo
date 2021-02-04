@@ -1,28 +1,33 @@
 # Sommaire 
 
-I - Intégration
-1. Intégration STM32
-2. Intégration FPGA
-   1. Vue Générale
-   2. Encodage Analyse DVI
-        1. Entrée / Sorties
-   3. Decodage Generation DVI et SDI
-        1. Entrées / Sorties
-3. Trames et registres
-        1. Trames et registres Analyse DVI
-        2. Trames et registres Analyse SDI
-        3. Trames et registres Generation DVI
-        4. Trames et registres Generation SDI
-        5. Trames et registres BUS_COM
-4. Comment faire des trames et registres
+[I - Intro](#1) <br>
+
+[II. Intégration STM32](#2) <br>
+
+[II. Intégration FPGA](#3) <br>
+[1. Vue Générale](#4) <br>
+[2. Encodage Analyse DVI](#5) <br>
+[a. Entrée / Sorties](#6) <br>
+[3. Decodage Generation DVI et SDI](#7) <br>
+[a. Entrée / Sorties](#8) <br>
+
+[III. Trames et registres](#9) <br>
+[1. Trames et registres Analyse DVI](#10) <br>
+[2. Trames et registres Analyse SDI](#11) <br>
+[3. Trames et registres Generation DVI](#12) <br>
+[4. Trames et registres Generation SDI](#13) <br>
+[5. Trames et registres BUS_COM](#14) <br>
+
+[IV. Comment faire des trames et registres](#15) <br>
+           
 
 
-# Intégration
+# Intégration <a id="1"></a>
 
 Lorsque les trames et les registres auront étés livrés, on pourra creer deux nouveau groupes pour l'intégration.
 On peut séparer l'intégration software en deux grandes parties : STM32 et FPGA
 
-## Intégration STM32
+## Intégration STM32 <a id="2"></a>
 
 L'équipe devra d'abord coder :
 - Script décodage des trames entrantes 
@@ -38,9 +43,9 @@ L’équipe fera l’intégration entre :
 
 ![](Images/STM32_Decodage_1.PNG)
 
-## Intégration FPGA
+## Intégration FPGA <a id="3"></a>
 
-### Vue générale
+### Vue générale <a id="4"></a>
 
 L'équipe devra d'abord coder :
 - Component décodage des trames entrantes 
@@ -54,7 +59,9 @@ L’équipe fera l’intégration entre :
 
 ![](Images/InteSoft_FPGA1.PNG) ![](Images/InteSoft_FPGA2.PNG)
 
-### Encodage Analyse DVI
+### Encodage Analyse DVI <a id="5"></a>
+
+## Entrées / Sorties <a id="6"></a>
 
 ![](Images/IO_Decodage_Analyse_DVI.PNG)
 
@@ -66,14 +73,15 @@ frame_format| Sur 3 bits
 vblank|
 hblank|
 
-## Decodage Generation DVI et SDI
+## Decodage Generation DVI et SDI <a id="7"></a>
+
+### Entrées / Sorties <a id="8"></a>
 
 
 
+# Trames et Registres <a id="9"></a>
 
-# Trames et Registres 
-
-## Trames et registres Analyse DVI
+## Trames et registres Analyse DVI <a id="10"></a>
 
 OCTET| NOM| DESCRIPTION
 -----|----|-------------
@@ -87,12 +95,12 @@ OCTET| NOM| DESCRIPTION
 12 <br> 13| VBLANK| Information sur 16 bits :<br> - Valeur du temps du blanking vertical ( en uS ).
 14 <br> 15| HBLANK| Information sur 16 bits :<br> - Valeur du temps du blanking horizontale ( en uS ).
 
-## Trames et registres Analyse SDI
+## Trames et registres Analyse SDI <a id="11"></a>
 
 En cours...
 
 
-## Trames et resgistres Generation DVI
+## Trames et resgistres Generation DVI <a id="12"></a>
 
 OCTET| NOM| DESCRIPTION
 -----|----|--------------
@@ -108,11 +116,11 @@ OCTET| NOM| DESCRIPTION
 14 <br> 15| PCLK| Horloge de référence de génération. Information sur 16 bits :<br> - Valeur de l’horloge ( en uS ).
 16| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
 
-### Trames et registres Generation SDI
+### Trames et registres Generation SDI <a id="13"></a>
 
 En cours...
 
-### Trames et registres BUS_COM
+### Trames et registres BUS_COM <a id="14"></a>
 
 Octet | Nom  | Description
 -----|------|-------------
@@ -131,7 +139,7 @@ Octet | Nom  | Description
 ![](Images/Agenda.PNG)
 
 
-# Comment faire les trames et registres ?
+# Comment faire les trames et registres ? <a id="15"></a>
 
 ## Trames
 
