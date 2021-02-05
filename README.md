@@ -123,16 +123,17 @@ En cours...
 ### Trames et registres BUS_COM <a id="14"></a>
 
 Octet | Nom  | Description
------|------|-------------
+------|------|-------------
 1|Nb_Octets|Nombre d’octets de la trame
 2|ID_Sys|Système dont la commande est sollicité
 3|ID_Cmd|Commande sollicité
-4|Bus_type|Type de bus utilisé :</br> 0x1 : SPI </br> 0x2 : I2C </br> 0x3 : UART
+4|Type_bus|Type de bus utilisé :</br> 0x1 : SPI </br> 0x2 : I2C </br> 0x3 : UART
 5|Adresse|Adresse de l'esclave (pour I2C)
 6|Taille_mot|Taille du mot seul à transmettre en octet (hors spécification de taille ou fréquence)
-7|Operateur|Nature de l'opérateur du facteur de bauds. _Exemple : 0 pour multiplication ; 1 pour division_
-8|Facteur_baud|Facteur (multiple de 9 600) du baud rate de transmission. **Dans le cas où Operateur = 0, la valeur de Facteur_baud multiplie 9 600. Dans le cas où Operateur = 1, la valeur de Facteur_baud divise 9 600.** </br>_Exemple : </br> Operateur = 1; Facteur_baud = 0x20 (32) ==> Bauds = 300 </br> Operateur = 0; Facteur_baud = 0x68 (104) ==> Bauds = 998 400_
+7|Operateur|Nature de l'opérateur du facteur de bauds. </br> 0x0 pour multiplication </br> 0x1 pour division
+8|Facteur_baud|Facteur (multiple de 9 600) du baud rate de transmission. </br> **Dans le cas où Operateur = 0x0, la valeur de Facteur_baud multiplie 9 600 </br> Dans le cas où Operateur = 0x1, la valeur de Facteur_baud divise 9 600.** </br>_Exemple : </br> Operateur = 1; Facteur_baud = 0x20 (32) ==> Bauds = 300 </br> Operateur = 0; Facteur_baud = 0x68 (104) ==> Bauds = 998 400_
 9 ou plus|Mot|Mot à transmettre (dépend de Taille_mot)
+
 
 # Calendrier des livraisons
 
