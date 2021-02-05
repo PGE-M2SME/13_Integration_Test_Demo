@@ -6,7 +6,7 @@
 
 [II. Intégration FPGA](#3) <br>
 [1. Vue Générale](#4) <br>
-[2. Encodage Analyse DVI](#5) <br>
+[2. Encodage Analyse SDI et DVI](#5) <br>
 [a. Entrée / Sorties](#6) <br>
 [3. Decodage Generation DVI et SDI](#7) <br>
 [a. Entrée / Sorties](#8) <br>
@@ -59,11 +59,13 @@ L’équipe fera l’intégration entre :
 
 ![](Images/InteSoft_FPGA1.PNG) ![](Images/InteSoft_FPGA2.PNG)
 
-### Encodage Analyse DVI <a id="5"></a>
+### Encodage Analyse SDI et DVI <a id="5"></a>
 
-## Entrées / Sorties <a id="6"></a>
+#### Entrées / Sorties <a id="6"></a>
 
-![](Images/IO_Decodage_Analyse_DVI.PNG)
+/!\ Seulement partie SDI
+
+![](Images/IO_Decodage_Analyse_SDI.PNG)
 
 Sorties|Description
 --------|----------
@@ -83,6 +85,8 @@ hblank|
 
 ## Trames et registres Analyse DVI <a id="10"></a>
 
+/!\ Non validé
+
 OCTET| NOM| DESCRIPTION
 -----|----|-------------
 1| Nb_octets| Nombre d’octet de la trame
@@ -97,7 +101,22 @@ OCTET| NOM| DESCRIPTION
 
 ## Trames et registres Analyse SDI <a id="11"></a>
 
-En cours...
+OCTET| NOM| DESCRIPTION
+-----|-----|------------
+1| Nb_octets| Nombre d’octet de la trame
+2| ID_SYS := 2| Système qui émet la commande
+3| ID_CMD := 1| Commande qui contient les informations de format vidéo et de rafraîchissement SDI.
+4| VIDEO FORMAT| Information sur 2 bits : <br> 00 → pas de format détecté <br> 01 → 1280 x 720 <br> 10 → 1920 x 1080 <br>
+5| FRAME FORMAT| Information sur 3 bits : <br> 000 → pas de détection <br> 001 → 25 fps <br> 010 → 30 fps <br> 011 → 50 fps <br> 111 → 60 fps <br>
+6 <br> 7| H BLANK| Information sur 16 bits : <br> - Temps du blanking horizontal (en uS).
+8 <br> 9| V BLANK| Information sur 16 bits : <br> - Temps du blanking vertical (en uS).
+
+OCTET| NOM| DESCRIPTION
+-----|-----|------------
+1| Nb_octets| Nombre d’octet de la trame
+2| ID_SYS := 2| Système qui émet la commande
+3| ID_CMD := 2| Commande qui permet de savoir si un flux SDI entrant est détecté ou non.
+4| SDI_STATUS| Information sur 1 bit : <br> 0 → Pas de réception vidéo <br> 1 → Réception d’un flux vidéo <br>
 
 
 ## Trames et resgistres Generation DVI <a id="12"></a>
