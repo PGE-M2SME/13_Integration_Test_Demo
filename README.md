@@ -63,9 +63,8 @@ L’équipe fera l’intégration entre :
 
 #### Entrées / Sorties <a id="6"></a>
 
-/!\ Seulement partie SDI
 
-![](Images/IO_Decodage_Analyse_SDI.PNG)
+![](Images/IO_Analyse.PNG)
 
 Sorties|Description
 --------|----------
