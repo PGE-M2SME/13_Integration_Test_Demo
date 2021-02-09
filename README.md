@@ -78,7 +78,7 @@ hblank|
 
 ### Entrées / Sorties <a id="8"></a>
 
-![](Images/Generation_vhdl_io.PNG)
+![](Images/Generation_vhdl_io.png)
 
 ![](Images/IO_Generation.PNG)
 
