@@ -78,13 +78,15 @@ hblank|
 
 ### Entrées / Sorties <a id="8"></a>
 
+![](Images/Generation_vhdl_io.PNG)
+
+![](Images/IO_Generation.PNG)
+
 
 
 # Trames et Registres <a id="9"></a>
 
 ## Trames et registres Analyse DVI <a id="10"></a>
-
-/!\ Non validé
 
 OCTET| NOM| DESCRIPTION
 -----|----|-------------
@@ -133,6 +135,7 @@ OCTET| NOM| DESCRIPTION
 13| V SYNC| Information sur 8 bits :<br> - Valeur de la synchro verticale ( en pixels).
 14 <br> 15| PCLK| Horloge de référence de génération. Information sur 16 bits :<br> - Valeur de l’horloge ( en uS ).
 16| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
+17|
 
 ### Trames et registres Generation SDI <a id="13"></a>
 
