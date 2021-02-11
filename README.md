@@ -29,7 +29,7 @@ Lorsque les trames et les registres auront étés livrés, on pourra creer deux 
 On peut séparer l'intégration software en deux grandes parties : STM32 et FPGA
 
 ## Intégration STM32 <a id="2"></a>
-
+<!--
 L'équipe devra d'abord coder :
 - Script décodage des trames entrantes 
 - Script encodage des trames sortantes
@@ -40,14 +40,15 @@ L’équipe fera l’intégration entre :
 - Les libraires SPI
 
 ![](Images/InteSoft_IHM.PNG)
+-->
 
-
-![](Images/STM32_Decodage_1.PNG)
+![](Images/Fonctions_STM32.PNG)
 
 ## Intégration FPGA <a id="3"></a>
 
 ### Vue générale <a id="4"></a>
 
+<!--
 L'équipe devra d'abord coder :
 - Component décodage des trames entrantes 
 - Component encodage des trames sortantes
@@ -57,8 +58,10 @@ L’équipe fera l’intégration entre :
 - Les Script d’encodage et de décodage
 - Les components SPI
 
-
 ![](Images/InteSoft_FPGA1.PNG) ![](Images/InteSoft_FPGA2.PNG)
+-->
+
+![](Images/Components.PNG)
 
 ### Encodage Analyse SDI et DVI <a id="5"></a>
 
@@ -67,13 +70,18 @@ L’équipe fera l’intégration entre :
 
 ![](Images/IO_Analyse.PNG)
 
-Sorties|Description
---------|----------
-vid_active| Etat 1 si on reçois un signal
-vid_format| Sur 2 bits
-frame_format| Sur 3 bits
-vblank|
-hblank|
+Sorties|Types|Description
+-------|------|----------
+data_dispo_SDI|SDI|A l'état 1 si on reçois des infos SDI
+vid_format| SDI|
+frame_format| SDI|
+vblank| DVI & SDI|
+hblank|DVI & SDI|
+data_dispo_DVI|DVI|A l'état 1 si on reçois des infos DVI
+Vsync| DVI|
+Hsync|DVI|
+Hresolution|DVI|
+Vresolution|DVI|
 
 ## Decodage Generation DVI et SDI <a id="7"></a>
 
