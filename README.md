@@ -11,6 +11,7 @@
 [a. Entrée / Sorties](#6) <br>
 [3. Decodage Generation DVI et SDI](#7) <br>
 [a. Entrée / Sorties](#8) <br>
+[4. Decodage / Encodage BUS_COM_](#8.2)<br>
 
 [III. Trames et registres](#9) <br>
 [1. Trames et registres Analyse DVI](#10) <br>
@@ -90,6 +91,12 @@ Vresolution|DVI|
 ![](Images/Generation_vhdl_io.png)
 
 ![](Images/IO_Generation.PNG)
+
+## Decodage / Encodage BUS_COM <a id="8.2"></a>
+
+### Entrées / Sorties
+
+![](Images/IO_BUS_COM.PNG)
 
 
 
