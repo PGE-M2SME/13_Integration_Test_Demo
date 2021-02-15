@@ -148,7 +148,7 @@ OCTET| NOM| DESCRIPTION
 19| VSyncPulse | Vertical sync pulse widht in pixels
 20| VBP| Vertical black porch width in pixels
 21|VPolSync| Vertical synch pulse polarity (1 = positive, 0 = negative)
-22|PixelClock| Pixel clock value
+22|PixelClock| Pixel clock value <br>1 -> 40 Mhz <br>2 -> 80 Mhz <br>3 -> 120 Mhz <br>4 -> 160 Mhz <br>
 
 
 <!--
