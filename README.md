@@ -136,8 +136,29 @@ OCTET| NOM| DESCRIPTION
 1| Nb_octets| Nombre d’octet de la trame
 2| ID_SYS := 1| Système qui émet la commande
 3| ID_CMD := 1| Commande qui contient les informations du format vidéo DVI à émettre
-4 <br> 5| H DISP| Information sur 16 bits : <br>- Résolution de la longueur de l’image (en pixels).
-6 <br> 7| V DISP| Information sur 16 bits :<br> - Valeur de résolution de la largeur de l’image (en pixels ).
+4 <br> 5| HLenght | Total number of pixel clock in a row
+6 <br> 7| HRes | Horizontal display width in pixels
+8 | HFP| Horizontal front porch widht in pixels
+9 <br> 10| HSyncPulse | Horizontal sync pulse widht in pixels
+11 <br> 12| HBP| Horizontal black porch width in pixels
+13|HPolSync| Horizontal synch pulse polarity (1 = positive, 0 = negative)
+14 <br> 15| VLenght | Vertical total number of pixel clock in a row
+16 <br> 17| VRes | Vertical display width in pixels
+18 | VFP| Vertical front porch widht in pixels
+19| VSyncPulse | Vertical sync pulse widht in pixels
+20| VBP| Vertical black porch width in pixels
+21|VPolSync| Vertical synch pulse polarity (1 = positive, 0 = negative)
+22|PixelClock| Pixel clock value
+
+
+<!--
+OCTET| NOM| DESCRIPTION
+-----|----|--------------
+1| Nb_octets| Nombre d’octet de la trame
+2| ID_SYS := 1| Système qui émet la commande
+3| ID_CMD := 1| Commande qui contient les informations du format vidéo DVI à émettre
+4 <br> 5| H DISP (HRes)| Information sur 16 bits : <br>- Résolution de la longueur de l’image (en pixels).
+6 <br> 7| V DISP (VRes)| Information sur 16 bits :<br> - Valeur de résolution de la largeur de l’image (en pixels ).
 8 <br> 9| H BLANK| Information sur 16 bits :<br> - Valeur du blanking horizontal (en pixels).
 10 <br> 11| V BLANK| Information sur 16 bits :<br> - Valeur du blanking vertical (en pixels).
 12| H SYNC| Information sur 8 bits : <br> - Valeur de la synchro horizontale ( en pixels).
@@ -145,7 +166,7 @@ OCTET| NOM| DESCRIPTION
 14 <br> 15| PCLK| Horloge de référence de génération. Information sur 16 bits :<br> - Valeur de l’horloge ( en uS ).
 16| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
 17|
-
+-->
 ### Trames et registres Generation SDI <a id="13"></a>
 
 En cours...
