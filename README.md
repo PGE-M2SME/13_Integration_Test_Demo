@@ -156,6 +156,7 @@ OCTET| NOM| DESCRIPTION
 20| VBP| Vertical black porch width in pixels
 21|VPolSync| Vertical synch pulse polarity (1 = positive, 0 = negative)
 22|PixelClock| Pixel clock value <br>1 -> 40 Mhz <br>2 -> 80 Mhz <br>3 -> 120 Mhz <br>4 -> 160 Mhz <br>
+23| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
 
 
 <!--
