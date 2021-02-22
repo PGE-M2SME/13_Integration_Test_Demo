@@ -146,17 +146,17 @@ OCTET| NOM| DESCRIPTION
 4 <br> 5| HLenght | Total number of pixel clock in a row
 6 <br> 7| HRes | Horizontal display width in pixels
 8 | HFP| Horizontal front porch widht in pixels
-9 <br> 10| HSyncPulse | Horizontal sync pulse widht in pixels
-11 <br> 12| HBP| Horizontal black porch width in pixels
-13|HPolSync| Horizontal synch pulse polarity (1 = positive, 0 = negative)
-14 <br> 15| VLenght | Vertical total number of pixel clock in a row
-16 <br> 17| VRes | Vertical display width in pixels
-18 | VFP| Vertical front porch widht in pixels
-19| VSyncPulse | Vertical sync pulse widht in pixels
-20| VBP| Vertical black porch width in pixels
-21|VPolSync| Vertical synch pulse polarity (1 = positive, 0 = negative)
-22|PixelClock| Pixel clock value <br>1 -> 40 Mhz <br>2 -> 80 Mhz <br>3 -> 120 Mhz <br>4 -> 160 Mhz <br>
-23| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
+9 | HSyncPulse | Horizontal sync pulse widht in pixels
+10 <br> 11| HBP| Horizontal black porch width in pixels
+12|HPolSync| Horizontal synch pulse polarity (1 = positive, 0 = negative)
+13 <br> 14| VLenght | Vertical total number of pixel clock in a row
+15 <br> 16| VRes | Vertical display width in pixels
+17 | VFP| Vertical front porch widht in pixels
+18| VSyncPulse | Vertical sync pulse widht in pixels
+19| VBP| Vertical black porch width in pixels
+20|VPolSync| Vertical synch pulse polarity (1 = positive, 0 = negative)
+21|PixelClock| Pixel clock value <br>1 -> 40 Mhz <br>2 -> 80 Mhz <br>3 -> 120 Mhz <br>4 -> 160 Mhz <br>
+22| MIRE ID| Sélection du type de mire à émettre <br> Information sur 4 bits : <br> 0000 → Mire barre code <br> 0001 → Mire contour blanc <br> 0010 → Mire green/red <br> 0011 → Mire horizontalBandMire <br> 0100 → Mire horizontalShadeGray <br> 0101 → Mire PatchWork <br> 0110 → Mire RectShadesGray <br> 0111 → Mire SwitchBlackWhite <br> 1000 → Mire VerticalBlandMire <br> 1001 → Mire VerticalShadesGray <br>
 
 
 <!--
